@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { MobileApp } from "../../components/MobileApp/MobileApp";

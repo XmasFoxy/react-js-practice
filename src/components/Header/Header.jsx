@@ -1,8 +1,11 @@
+import { Link, useNavigate } from 'react-router';
 import shoppingCart from '../../assets/shopping-cart.svg';
 import accountIcon from '../../assets/user.svg';
 import './header.css';
 
 export function Header () {
+    const navigate = useNavigate();
+
     return (
         <header className='header'>
             <h1 className='header__heading'>SUPER SHOP</h1>
@@ -12,9 +15,9 @@ export function Header () {
                     <img src={shoppingCart} />
                 </div>
 
-                <div className='header__account header__block'>
-                    <img src={accountIcon} />
-                </div>
+                <Link to="/auth" className="header__account header__block">
+                    <img src={accountIcon} alt="Аккаунт" />
+                </Link>
             </div>
         </header>
 )}

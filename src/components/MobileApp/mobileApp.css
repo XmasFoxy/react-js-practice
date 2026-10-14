@@ -1,0 +1,88 @@
+.mobileApp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobileApp__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    max-width: 40%;
+}
+
+.mobileApp__heading {
+    font-size: 3rem;
+    line-height: 100%;
+}
+
+.mobileApp__content p {
+    font-size: 1.2rem;
+}
+
+.mobileApp__interactive {
+    display: flex;
+    gap: 3vw;
+}
+
+.mobileApp__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    border: 1px solid #403F3D;
+    border-radius: 40px;
+    padding: 2vh 2vw;
+    transition: transform 0.4s ease;
+}
+
+.mobileApp__button:hover {
+    transform: scale(1.10);
+}
+
+.mobileApp__button_text p{
+        font-size: 1rem;
+}
+
+.mobileApp__button_text h4 {
+    font-size: 1.3rem;
+}
+
+.mobileApp__button_text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+@media (max-width: 1214px) {
+    .mobileApp {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3vh;
+    }
+
+    .mobileApp__content {
+        max-width: 70%;
+    }
+
+    .mobileApp__content {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 574px) {
+    .mobileApp__content {
+        max-width: 100%;
+    }
+
+    .mobileApp__button_text p{
+        font-size: 0.8rem;
+}
+
+    .mobileApp__button_text h4 {
+        font-size: 1.1rem;
+    }
+}

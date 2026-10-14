@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    background-color: #665F55;
+    color: #E1D4C9;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vw;
+}
+
+.header__heading {
+    font-size: 2rem;
+}
+
+.header__icons_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    align-items: center;
+}
+
+.header__block img{
+    width: 100%;
+    height: 100%;
+}
+
+.header__block {
+    max-width: 32px;
+    max-height: 32px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.header__block:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}

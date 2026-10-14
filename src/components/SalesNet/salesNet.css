@@ -1,0 +1,72 @@
+.sales {
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+.sales__main_board img {
+    height: 100%;
+}
+
+.sales__main_board {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sales__external_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+}
+
+
+.sales__board {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sales__board img {
+    height: 100%;
+}
+
+.sales__internal_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6vh;
+}
+
+.sales__weeks_board {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sales__weeks_board img{
+    height: 100%;
+}
+
+.sales__scale {
+    transition: transform 0.4s ease;
+}
+
+.sales__scale:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .sales {
+        grid-template-columns: 1fr;
+        gap: 1vh;
+    }
+
+    .sales__internal_box {
+        gap: 1vh;
+    }
+
+    .sales__external_box {
+        gap: 1.6vw;
+    }
+}

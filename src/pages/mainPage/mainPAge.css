@@ -1,0 +1,13 @@
+.main_page {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    background-color: #E1D4C9;
+}
+
+.main_page__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding: 0 3vw;
+}

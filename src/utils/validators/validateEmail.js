@@ -1,12 +1,12 @@
 export function validateEmail(email) {
     if (!email?.trim()) {
-        return 'Введите почту';
+        return 'Enter your email';
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
-        return 'Введите корректную почту';
+        return 'Enter the valid email';
     }
 
     return true;

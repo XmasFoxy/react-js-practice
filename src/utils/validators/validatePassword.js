@@ -1,10 +1,10 @@
 export function validatePassword(password) {
     if (!password) {
-        return 'Введите пароль';
+        return 'Enter your password';
     }
 
     if (password.length < 8) {
-        return 'Пароль должен содержать минимум 8 символов';
+        return 'The password must be longer than 8 characters';
     }
 
     return true;

@@ -54,3 +54,31 @@
     color: red;
     width: 80%;
 }
+
+.loader {
+    background-color: #E1D4C9;
+    color: #665F55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader h1 {
+    font-size: 2rem;
+}
+
+.back {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    background-color: #665F55;
+    color: #E1D4C9;
+    padding: 1%;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.back:hover {
+    transform: scale(1.03);
+}

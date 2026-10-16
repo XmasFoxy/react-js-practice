@@ -1,0 +1,27 @@
+.groceries_page {
+    background-color: #E1D4C9;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    min-height: 100vh;
+}
+
+.groceries_page__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .groceries_page {
+        gap: 2rem;
+    }
+
+    .groceries_page__main {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}

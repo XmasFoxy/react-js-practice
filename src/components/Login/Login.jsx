@@ -17,15 +17,21 @@ export function Login () {
     const [isLoading, setIsLoading] = useState(false);
     const [success, setSuccess] = useState('');
     const navigate = useNavigate();
+    const goBack = <button 
+    className='back'
+    onClick={() => navigate(-1)}
+    >⭠ Go back</button>;
 
 
     if(isLoading) {
-        return <h1>Loading...</h1>
+        return <div className='loader'><h1>Loading...</h1></div>
     }
 
     if (isHasAccount) {
         return (
             <div className='login_wrapper'>
+                {goBack}
+
                 <form className='main'>
                     <h1 className='main__heading'>Sign in</h1>
 
@@ -99,6 +105,8 @@ export function Login () {
 
     return (
             <div className='login_wrapper'>
+                {goBack}
+                
                 <form className='main'>
                     {console.log(success)}
                     <h1 className='main__heading'>Sign up</h1>

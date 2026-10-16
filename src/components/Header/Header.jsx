@@ -8,12 +8,14 @@ export function Header () {
 
     return (
         <header className='header'>
-            <h1 className='header__heading'>SUPER SHOP</h1>
+            <Link to='/'>
+                <h1 className='header__heading'>SUPER SHOP</h1>
+            </Link>
 
             <div className='header__icons_container'>
-                <div className='header__cart header__block'>
+                <Link to='/cart' className='header__cart header__block'>
                     <img src={shoppingCart} />
-                </div>
+                </Link>
 
                 <Link to="/auth" className="header__account header__block">
                     <img src={accountIcon} alt="Аккаунт" />

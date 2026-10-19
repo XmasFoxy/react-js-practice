@@ -4,6 +4,16 @@
     margin-bottom: 1.25rem;
 }
 
+.list__message {
+    width: 100%;
+    max-width: 1200px;
+    color: #665F55;
+}
+
+.list__message--error {
+    color: #a12828;
+}
+
 .list {
     background-color: #E1D4C9;
     width: 100%;
@@ -11,15 +21,16 @@
 }
 
 .list__groceries {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem 0;
 }
 
 .list__grocery {
     display: flex;
     flex-direction: column;
-    min-width: 0;
+    width: 31%;
     gap: 1rem;
     background-color: #665F55;
     color: #E1D4C9;
@@ -27,23 +38,21 @@
     overflow: hidden;
     align-items: center;
     padding-bottom: 1.25rem;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .list__grocery:hover {
-    transform: translateY(-3px);
     cursor: pointer;
-    box-shadow: 0 6px 16px rgb(68 64 64 / 20%);
+    box-shadow: 0 6px 16px #ccc;
 }
 
 .list__heading {
     padding: 0 0.75rem;
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .list__description {
-    width: calc(100% - 2rem);
+    width: 90%;
     display: flex;
     justify-content: space-between;
     gap: 0.75rem;
@@ -51,7 +60,7 @@
 
 .list__img {
     width: 100%;
-    aspect-ratio: 1;
+    height: 260px;
     background-color: #fff;
 }
 
@@ -62,7 +71,7 @@
 }
 
 .list__button {
-    width: calc(100% - 2rem);
+    width: 90%;
     font-size: 1rem;
     background-color: #fff;
     color: #665F55;
@@ -75,16 +84,27 @@
     transform: scale(1.03);
 }
 
+.list__button--added {
+    background-color: #E1D4C9;
+}
+
 @media (max-width: 900px) {
-    .list__groceries {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
+    .list__grocery {
+        width: 48%;
     }
 }
 
 @media (max-width: 520px) {
-    .list__groceries {
-        grid-template-columns: minmax(0, 1fr);
+    .list__grocery {
+        width: 100%;
+    }
+
+    .list__img {
+        height: 300px;
+    }
+
+    .list__heading {
+        font-size: 1.125rem;
     }
 
     .list__grocery {

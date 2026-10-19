@@ -1,0 +1,59 @@
+.account_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 3rem;
+    background-color: #E1D4C9;
+}
+
+.account_page__main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.account_card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 520px;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: #665F55;
+    color: #E1D4C9;
+}
+
+.account_card__heading {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.account_card__button {
+    margin-top: 0.5rem;
+    padding: 0.625rem 1rem;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #665F55;
+    transition: transform 0.4s ease;
+}
+
+.account_card__button:hover {
+    transform: scale(1.03);
+}
+
+.account_card__error {
+    color: #ffd5d5;
+}
+
+@media (max-width: 600px) {
+    .account_page__main {
+        padding: 0 1rem;
+    }
+
+    .account_card {
+        padding: 1.5rem;
+    }
+}

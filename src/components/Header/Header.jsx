@@ -1,10 +1,11 @@
-import { Link, useNavigate } from 'react-router';
+import { Link } from 'react-router';
+import { useSelector } from 'react-redux';
 import shoppingCart from '../../assets/shopping-cart.svg';
 import accountIcon from '../../assets/user.svg';
 import './header.css';
 
 export function Header () {
-    const navigate = useNavigate();
+    const user = useSelector((state) => state.account.user);
 
     return (
         <header className='header'>
@@ -13,12 +14,18 @@ export function Header () {
             </Link>
 
             <div className='header__icons_container'>
-                <Link to='/cart' className='header__cart header__block'>
-                    <img src={shoppingCart} />
+                <Link
+                    to={user ? '/cart' : '/auth'}
+                    className='header__cart header__block'
+                >
+                    <img src={shoppingCart} alt='Cart' />
                 </Link>
 
-                <Link to="/auth" className="header__account header__block">
-                    <img src={accountIcon} alt="Аккаунт" />
+                <Link
+                    to={user ? '/account' : '/auth'}
+                    className="header__account header__block"
+                >
+                    <img src={accountIcon} alt="Account" />
                 </Link>
             </div>
         </header>

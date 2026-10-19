@@ -12,36 +12,39 @@
 }
 
 .filter__heading {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: 2rem;
     color: #E1D4C9;
     text-align: center;
 }
 
 .filter__interactive {
-    display: grid;
-    grid-template-columns: minmax(180px, 1.5fr) minmax(160px, 1fr) minmax(130px, 0.8fr) auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 0.75rem;
     width: 100%;
 }
 
 .filter__input {
-    min-width: 0;
+    width: 30%;
+    flex-grow: 2;
     font-size: 1rem;
     background-color: #E1D4C9;
     color: #665F55;
     border-radius: 20px;
     padding: 0.75rem 1rem;
-    border: 1px solid transparent;
+    border: 1px solid #665F55;
 }
 
 .filter__select {
-    min-width: 0;
+    width: 20%;
+    flex-grow: 1;
     font-size: 1rem;
     background-color: #E1D4C9;
     color: #665F55;
     border-radius: 20px;
     padding: 0.75rem;
-    border: 1px solid transparent;
+    border: 1px solid #665F55;
 }
 
 .filter__select:hover {
@@ -63,16 +66,17 @@
 }
 
 @media (max-width: 900px) {
-    .filter__interactive {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .filter__input {
+        width: 100%;
+        flex-grow: 1;
     }
 
-    .filter__input {
-        grid-column: 1 / -1;
+    .filter__select {
+        width: 45%;
     }
 
     .filter__button {
-        grid-column: 1 / -1;
+        width: 100%;
     }
 }
 
@@ -83,15 +87,9 @@
         border-radius: 16px;
     }
 
-    .filter__interactive {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.625rem;
-    }
-
     .filter__input,
     .filter__select,
     .filter__button {
-        grid-column: auto;
         width: 100%;
     }
 }

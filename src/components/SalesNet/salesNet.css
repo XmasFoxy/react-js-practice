@@ -12,6 +12,7 @@
 .sales__main_board {
     border-radius: 20px;
     overflow: hidden;
+    transition: transform 0.4s ease;
 }
 
 .sales__external_box {
@@ -25,6 +26,7 @@
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+    transition: transform 0.4s ease;
 }
 
 .sales__board img {
@@ -41,19 +43,16 @@
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+    transition: transform 0.4s ease;
 }
 
 .sales__weeks_board img{
     height: 100%;
 }
 
-.sales__scale {
-    transition: transform 0.4s ease;
-}
-
 .sales__scale:hover {
-    transform: scale(1.03);
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 @media (max-width: 800px) {

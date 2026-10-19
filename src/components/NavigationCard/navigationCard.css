@@ -23,7 +23,7 @@
 }
 
 .navigationCard__content {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #665F55;
     padding: 2vh 2vw;
     max-width: 50%;
     display: flex;

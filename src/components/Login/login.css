@@ -33,6 +33,7 @@
 }
 
 .main__router {
+    padding: 0;
     color: #fff;
     text-decoration: underline;
 }
@@ -47,12 +48,30 @@
     border-radius: 20px;
     width: 80%;
     padding: 2%;
+    transition: transform 0.4s ease;
+}
+
+.main__button:hover {
+    transform: scale(1.03);
+}
+
+.main__button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.main__error {
+    width: 80%;
 }
 
 .alarm {
     font-size: 0.7rem;
     color: red;
     width: 80%;
+}
+
+.main__description {
+    text-align: center;
 }
 
 .loader {
@@ -76,7 +95,7 @@
     color: #E1D4C9;
     padding: 1%;
     border-radius: 20px;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .back:hover {

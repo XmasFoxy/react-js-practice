@@ -8,7 +8,7 @@ import { store } from './store/store.js';
 const root = createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-        <BrowserRouter basename="/react-js-practice">
+        <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/react-js-practice' : '/'}>
             <App />
         </BrowserRouter>
     </Provider>

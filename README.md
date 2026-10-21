@@ -15,3 +15,7 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## Deployment
+
+Click here -> [Super Store](https://xmasfoxy.github.io/react-js-practice/)

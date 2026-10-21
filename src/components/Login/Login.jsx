@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { signIn } from '../../utils/auth/signIn.js';
 import { createAccount } from '../../utils/auth/createAccount.js';
 import { getAccountDetails } from '../../utils/auth/getAccountDetails.js';
@@ -20,6 +20,7 @@ export function Login() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
     const dispatch = useDispatch();
+    const location = useLocation();
     const navigate = useNavigate();
 
     const emailError = validateEmail(email);
@@ -30,7 +31,8 @@ export function Login() {
         confirmPasswordError = true;
     }
 
-    async function handleSubmit() {
+    async function handleSubmit(event) {
+        event.preventDefault();
         setEmailTouched(true);
         setPasswordTouched(true);
         if (!isSignIn) {
@@ -61,7 +63,7 @@ export function Login() {
             }
 
             dispatch(setUser(getAccountDetails(user)));
-            navigate('/account');
+            navigate(location.state?.from || '/account', { replace: true });
         } catch (authError) {
             setError(authError.message);
         } finally {
@@ -74,6 +76,10 @@ export function Login() {
         setConfirmPassword('');
         setConfirmPasswordTouched(false);
         setError('');
+        setEmail('');
+        setPassword('');
+        setEmailTouched(false);
+        setPasswordTouched(false);
     }
 
     return (

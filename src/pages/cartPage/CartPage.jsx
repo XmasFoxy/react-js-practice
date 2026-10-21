@@ -11,7 +11,7 @@ export function CartPage () {
     const user = useSelector((state) => state.account.user);
 
     if (!user) {
-        return <Navigate to='/auth' replace />;
+        return <Navigate to='/auth' state={{ from: '/cart' }} replace />;
     }
 
     return (

@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/index.jsx',  
     output: {
         path: path.resolve(__dirname, 'dist'),
-        pablickPath: '/react-js-practice/',
+        publicPath: '/react-js-practice/',
         filename: 'bundle.js',
         clean: true,
     },

@@ -1,21 +1,14 @@
 import { useState } from 'react';
-import { useGetGroceriesQuery } from '../../store/groceriesApi.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { addItem } from '../../store/cartSlice.js';
 import './groceriesList.css';
 
-export function GroceriesList() {
-    const { data, error, isLoading } = useGetGroceriesQuery();
+export function GroceriesList({ groceries, error, isLoading }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const user = useSelector((state) => state.account.user);
     const [addedProductId, setAddedProductId] = useState(null);
-    let groceries = [];
-
-    if (data) {
-        groceries = data;
-    }
 
     function handleAddToCart(grocery) {
         if (!user) {

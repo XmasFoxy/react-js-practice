@@ -16,6 +16,7 @@ export function Header () {
             <div className='header__icons_container'>
                 <Link
                     to={user ? '/cart' : '/auth'}
+                    state={!user ? { from: '/cart' } : undefined}
                     className='header__cart header__block'
                 >
                     <img src={shoppingCart} alt='Cart' />
@@ -23,6 +24,7 @@ export function Header () {
 
                 <Link
                     to={user ? '/account' : '/auth'}
+                    state={!user ? { from: '/account' } : undefined}
                     className="header__account header__block"
                 >
                     <img src={accountIcon} alt="Account" />
